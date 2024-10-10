@@ -1,0 +1,317 @@
+1. Create a function greet that takes two positional arguments: name and greeting, and returns a personalized greeting message.
+
+function greet(name,greeting){
+    return name + " " + greeting;
+  }
+  let greeting = "Hello";
+  let neww = "World";
+  console.log(greet(greeting,neww));
+_______________________________________________________
+
+2. Write a function makeSandwich that takes two arguments: breadType and filling. The default value for breadType should be "whole wheat".
+
+function makeSandwich(breadType = "Whole Wheat", filling) {
+    return breadType + " " + filling;
+}
+let breadType ;
+let filling = "brown";
+console.log(makeSandwich(breadType,filling));
+_______________________________________________________
+
+3. Create a function displayInfo that takes three arguments: name, age, and city. If no city is provided, it should default to "Unknown".
+
+function displayInfo(name, age, city = "Unknown") {
+    return name + " " + age + " " + city;
+}
+let namee = "shubham";
+let age = 22;
+let city;
+console.log(displayInfo(namee, age, city));
+_______________________________________________________
+
+4. Create a function sumNumbers that takes an unknown number of arguments using the rest operator and returns their sum.
+
+function sumnumber(...number){
+  const [a, b, c, d] = number;
+  console.log(a+b+c+d);
+}
+sumnumber(1,2,3,4);
+_______________________________________________________
+
+5. Create a function introduce that takes three positional arguments: firstName, lastName, and age, and returns a sentence introducing the person.
+
+function introduce(firstName, lastName, age) {
+    return "Hello myself " + firstName + " " + lastName + " and i'm " + age + " years old."
+}
+let firstName = "shubham";
+let lastName = "saini";
+let age = 22;
+console.log(introduce(firstName, lastName, age));
+______________________________________________________
+
+6. Create a function multiply that takes two positional arguments x and y, with a default value for y as 1, and returns the result of multiplying them.
+
+function multiply(x,y=1){
+    return x*y;
+}
+let x=29;
+let y;
+console.log(multiply(x,y));
+_____________________________________________________
+
+7. Create a function buildSentence that accepts three arguments: subject, verb, and object. If no object is passed, it should default to "something".
+
+function buildSentence(subject, verb, object = "Something") {
+    return subject + " " + verb + " " + object;
+}
+let subject = "He";
+let verb = "is";
+let object = "a Doctor";
+console.log(buildSentence(subject, verb, object));
+____________________________________________________
+
+8. Write a function addNumbers that takes an unknown number of numbers using the rest operator and returns the sum.
+
+function addNumbers(...number){
+    const [a, b, c, d] = number;
+    console.log(a+b+c+d);
+  }
+addNumbers(1,2,3,4);
+___________________________________________________
+
+9. Write a function orderPizza that takes two arguments: size and topping. If no topping is provided, it should default to "cheese".
+
+function orderPizza(size, topping = "cheese") {
+    return size + " And " + topping;
+}
+let size = "large";
+let topping = "without cheese";
+console.log(orderPizza(size, topping));
+__________________________________________________
+
+10.Write a function introducePerson that takes two positional arguments name and profession, with profession defaulting to "Student".
+
+function introducePerson(namee, profession = "student") {
+    return namee + "  " + profession;
+}
+let namee = "shubham";
+let profession = "Intern";
+console.log(introducePerson(namee, profession));
+__________________________________________________
+
+11. Write a function buildCar that accepts three arguments: brand, model, and year. If no year is provided, it should default to the current year.
+
+function buildCar(brand, model, year = 2024) {
+    return "Brand is " + brand + " and model is " + model + " and year is " + year;
+}
+let brand = "Jeep";
+let model = 5;
+let year;
+console.log(buildCar(brand, model, year));
+_______________________________________________________
+
+12. Write a function introduceEmployee that takes two positional arguments: employeeName and position, with position defaulting to "intern".
+
+function introduceEmployee(employeeName, position = "student") {
+    return "name is " + employeeName + " and position is " + position;
+}
+let employeeName = "shubham";
+let position = "Intern";
+console.log(introduceEmployee(employeeName, position));
+_______________________________________________________
+
+13. Write a function divideNumbers that takes two arguments: a and b, with b defaulting to 1 if not provided.
+function divideNumbers(a,b=1)
+{
+    return a/b;
+}
+let a=12;
+let b=6;
+console.log(divideNumbers(a,b)); 
+_______________________________________________________
+
+14. Write a function calculatePrice that takes two arguments: price and taxRate. If taxRate is not provided, it should default to 5%.
+
+function calculatePrice(price, taxRate = 0.05) {
+    return price + (taxRate * price);
+}
+let price = 10;
+let taxRate;
+console.log(calculatePrice(price, taxRate));
+_______________________________________________________
+
+15. Create an object car with primitive properties: brand, model, and year.
+
+let car =
+{
+    brand : "Jeep",
+    model: 5,
+    year:2024,
+}
+console.log(car);
+_______________________________________________________
+
+16. Create an object laptop with both primitive (brand, price) and non-primitive (features - an array) properties.
+
+let laptop =
+{
+    brand : "ASUS Vivobook 15",
+    price: 40000,
+    features:["i3","12th gen","256gb SSD","8GB RAM"],
+}
+console.log(laptop);
+_______________________________________________________
+
+17. Create an object book with non-primitive properties: title, author, and reviews (where reviews is an array of review objects).
+
+let book={
+    title:"Data Structures And Algorithms Made Easy",
+    author:"Narasimha Karumanchi",
+    reviews:["Rating - 8.5/10","Review-Good,Easy to Understand"],
+}
+console.log(book);
+_______________________________________________________
+
+18. Write a function buildPerson that takes two arguments: firstName and lastName, and returns an object representing the person.
+
+function buildPerson(firstName,lastName)
+{
+   let obj= {
+        firstName,
+        lastName,
+    }
+    return obj;
+}
+console.log(buildPerson("Prajjal","Dhar"));
+_______________________________________________________
+
+19. Write a function buildTeam that takes an unknown number of team members using the rest operator and returns an array of their names.
+
+function  buildTeam(...team)
+{
+    return [Shubham,Ravi,Ram]=team;
+}
+console.log(buildTeam("Shubham","Ravi","Ram"));
+_______________________________________________________
+
+20. Create a function makeCoffee that takes one required argument type and an unknown number of optional ingredients using the rest operator.
+
+function makeCoffee(type="Black", ...ingredients) {
+  const [Milk,Sugar,coffee]=ingredients;
+  return `making a ${type} coffee and ingredients are using ${ingredients}`;
+}
+
+console.log(makeCoffee(undefined,"milk","Sugar","coffee"));
+_______________________________________________________
+
+21. Create a function findAverage that takes an unknown number of scores using the rest operator and returns the average score.
+
+function average(...numbers) {
+    const sum= numbers.reduce((total, num) => total + num, 0);
+    return sum/numbers.length;
+}
+console.log(average(1, 2, 3));
+_______________________________________________________
+
+22. Write a function describePet that accepts two arguments: petName and petType. If no petType is provided, it should default to "dog".
+
+function describePet(petName,petType="Dog")
+{
+    return `${petName} and this is a ${petType}`;
+}
+let petName="lilly";
+let petType="Cat";
+console.log(describePet(petName,petType));
+_______________________________________________________
+
+23. Write a function getTotalPrice that takes an unknown number of prices as arguments using the rest operator and returns the total price.
+
+function getTotalPrice(...price) {
+    return sum= price.reduce((total, num) => total + num, 0);
+}
+console.log(getTotalPrice(1, 2, 3));
+_______________________________________________________
+
+24. Create a function calculateArea that accepts two arguments: length and width. If width is not provided, it should default to the same value as length (for a square).
+
+function calculateArea(length,width=length) {
+    console.log(length*width);
+}
+calculateArea(10);
+_______________________________________________________
+
+25. Write a function joinStrings that accepts an unknown number of strings using the rest operator and returns them concatenated into one string.
+
+function joinStrings(...strngs)
+{
+    return `${strngs[0]} ${strngs[1]} ${strngs[2]} ${strngs[3]}`;
+}
+console.log( joinStrings("Shubham","Kumar","Saini","JavaScript"));
+_______________________________________________________
+
+26. Create a function createUserProfile that accepts three arguments: name, email, and role. If no role is provided, it should default to "user".
+
+function createUserProfile(namee,email,role="User")
+{
+    return `user name is ${namee}, email is ${email} and role is ${role}`;
+}
+let namee="shubham saini";
+let email="shubham123@gmail.com";
+let role="Intern";
+console.log(createUserProfile(namee,email,role));
+_______________________________________________________
+
+27. Create a function findMax that accepts an unknown number of numbers using the rest operator and returns the maximum value.
+
+function findMax(...number)
+{
+    const [a,b,c,d]=number;
+    let max=a;
+    if(b>max)
+        max=b;
+    if(c>max)
+        max=c;
+    if(d>max)
+        max=d;
+    return max;
+}
+console.log(findMax(1,2,3,7));
+_______________________________________________________
+
+28. Create a function discountPrice that takes two positional arguments: price and discountPercentage. If no discount is provided, it should default to 10%.
+
+function discountPrice(price,discountPercentage=0.10)
+{
+    const discount=(price*discountPercentage)/100;
+    const actualPrice=price - discount;
+    console.log(actualPrice);
+}
+discountPrice(1200,25);
+_______________________________________________________
+
+29. Create an object person with a method greet that prints a greeting message using the name property.
+let person = {
+    namee:"shubham",
+    greet:function()
+    {
+        console.log(`Hello ${this.namee}`);
+    },
+};
+person.greet();
+_______________________________________________________
+
+30. Create a function combineArrays that accepts an unknown number of arrays using the rest operator and returns one combined array.
+
+function combinearr(...args) { 
+  const [a, b] = args; 
+  console.log(a); 
+  const c = [...a, ...b]; 
+  console.log(c); 
+  return c; 
+} 
+
+let arr1 = [1, 2, 3]; 
+let arr2 = [4, 5, 6]; 
+let c = combinearr(arr1, arr2); 
+console.log(c); 
+______________________________________________________
