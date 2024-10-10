@@ -1,0 +1,108 @@
+1. console.log(x);
+   var x = 5;
+
+// Output = undefined
+
+Explanation : In JS, var keyword is hoisted at the top of their scope. 
+           2) This means that the declaration of x is moved to the beginning of the function, even though it's physically defined later.
+           3) Only after the console.log statement is executed, the x variable is assigned the value 5.
+_____________________________________________________
+
+2. let y = 10;if (true) {
+   let y = 20;
+   }
+   console.log(y);
+
+// Output = 10
+
+Explanation : in this code, the let keyword is used to declare two variables names "y" within different scopes.
+             2) Global Scope : The first let y = 10; declaration creates a variable y in the global scope.
+             3) Block Scope : The second let y = 20; declaration creates a new variable y within the if block.
+When console.log(y); is executed, it refers to the a variable declared within the if block, which has the value 10. Therefore, the console will              output 10.
+_____________________________________________________
+
+3. var a = 10;if (true) {
+   var a = 20;
+   }
+   console.log(a);
+
+// Output = 20
+
+Explanation : in this code, the var keyword is used to declare two variable names "y" within different scopes. 
+            Global scope: The first var a = 10; declaration creates a variable a in the global scope.
+            Block scope: The second var a = 20; declaration creates a new variable a within the if block.
+            When console.log(a); is executed, it refers to the a variable declared within the if block, which has the value 20. Therefore, the console will              output 20.
+_____________________________________________________
+
+4. console.log(z);let z = 15;
+   // Output = ERROR!
+ 
+Explanation : Reference Error: Cannot access 'z' before initialization
+              Here z is not initialized first that's why z it cannot be accessed.
+_____________________________________________________
+
+5. .function test() {  var m = 30;
+  if (true) {
+    let m = 40;
+    console.log(m);
+  }
+  console.log(m);
+}
+test();
+ 
+// Output = 40
+            30
+
+Explanation : Here 40 is printed first because it is accessed in the block scope.
+              and 30 is printed second because it is accessed in the function scope.
+_____________________________________________________
+
+6. function test() {  var a = 50;
+  if (true) {
+    var a = 60;
+    let b = 70;
+    console.log(a, b);
+  }
+  console.log(a, b);
+}
+test();
+
+// Output = 60 70 
+            Error!
+
+Explanation = Here only first console.log(a, b) is printed whose value is 60 70 because it is accessed first and ,
+              second console.log(a, b) shows error! because b is undefined only a is defined so it shows error. 
+_____________________________________________________
+
+7.if (true) {  let a = 10;
+  const b = 20;
+}
+console.log(a, b);
+
+//Output = ERROR!
+
+Explanation : Output is showing ERROR! because console.log(a, b) is not in the block scope. 
+              and a, b are not defined out of the scope for console.log to print the values.
+_____________________________________________________
+
+8. var n = 5;{
+   let n = 10;
+    console.log(n);
+    }
+   console.log(n);
+
+// Output = 10
+             5
+
+Explanation : In this code, the console.log(n) in the {} is accessed first because it is in the Block scope and it prints the output 10
+               and in the next line 5 is printed because it var keyword which holds the value 5 is accessed outside of the block scope.
+_____________________________________________________
+
+9. const obj = { a: 1, b: 2 };obj.a = 10;
+   console.log(obj);
+
+// Output = { a: 10, b: 2 }
+
+Explanation : In this code, we created an object first and the const keyword is used to create an object named obj with  properties a and b.
+              in 2nd step the property named a gets updated by the value 10.
+              in 3rd step console.log(obj); prints the updated value.
